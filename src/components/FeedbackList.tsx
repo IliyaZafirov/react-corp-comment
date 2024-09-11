@@ -17,9 +17,8 @@ export default function FeedbackList() {
         return <FeedbackItem feedbackItem={feedbackItem} />;
       })} */}
 
-      {feedbackItems.map((feedbackItem) => (
-        <FeedbackItem feedbackItem={feedbackItem} />
-      ))}
+{feedbackItems.map(feedbackItem => 
+(<FeedbackItem feedbackItem={feedbackItem} />))}
     </ol>
   );
 }
