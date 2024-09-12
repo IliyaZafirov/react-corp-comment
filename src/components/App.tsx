@@ -19,7 +19,6 @@ function App() {
         : feedbackItems,
     [feedbackItems, selectedCompany]
   );
-
   const companyList = useMemo(
     () =>
       feedbackItems
@@ -29,7 +28,6 @@ function App() {
         }),
     [feedbackItems]
   );
-
   const handleAddToList = async (text: string) => {
     const companyName = text
       .split(" ")
@@ -58,6 +56,9 @@ function App() {
         body: JSON.stringify(newItem),
       }
     );
+  };
+  const handleSelectCompany = (company: string) => {
+    setSelectedCompany(company);
   };
 
   useEffect(() => {
@@ -103,10 +104,6 @@ function App() {
     //     setIsLoading(false);
     //   });
   }, []);
-
-  const handleSelectCompany = (company: string) => {
-    setSelectedCompany(company);
-  };
 
   return (
     <div className="app">
