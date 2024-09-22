@@ -120,6 +120,7 @@ function App() {
       <HashtagList>
         {companyList.map((company) => (
           <HashtagItem
+            key={company}
             company={company}
             onSelectCompany={handleSelectCompany}
           />
